@@ -1,0 +1,40 @@
+/*Váriaveis de estilização
+ Paleta de cores: #acor Marrom / #acor Vermelho 
+*/
+
+:root {
+  /*cores*/
+  --cor-fundo: ##1a48a5;
+  --cor-texto: #fca89d;
+ 
+ 
+ /*Fonte*/
+ --fonte-texto: "tahoma";
+ --fonte-titulo: "Arials";
+
+}
+
+/*===============================*/
+
+/*Cofg da rolagem da Pag*/
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/*Estilização do body*/
+body{
+   font-family: var(--fonte-texto);
+   color: var(--cor-texto);
+   line-height: 1.50;
+   font-size: 20;
+   background-color: darkblue;
+
+}
+
+
+
+h1 {
+  color: #1a48a5;
+}
