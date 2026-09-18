@@ -3,44 +3,157 @@
         <meta charset="UTF-8"/>         <!--TAG P/Configuração de caracteres(acentos)-->
         <title>Victor Kahuach | Portfólio</title>
         <link href="img/icone.png" rel="shortcut icon"/>         <!--TAG para adicionar Icone na aba do navegador-->
-    </head>
+        <link href="estilo.css" rel="stylesheet"/>           <!--Tag Para adiocionar o arquivo CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Betania+Patmos&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+           <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+        </head>
     <body>
-        <header>      <!--Cabeçalho de conteúdo da página-->
-             <nav>    <!--Menu-->
-                Sobre
-                Cursos
-                Formação
-                Projetos
-                Contato
+        <header class="cabecalho">      <!--Cabeçalho de conteúdo da página-->
+          <div class="container"> <!--Separador dos dois conteudso do header-->
+          <a href="# " class="nome">
+            &lt;<span>Victor</span>/&gt;
+          </a>
+             <nav class="menu">    <!--Menu-->
+              
+                <a href="#sobre">Sobre</a>
+                <a href="#cursos">Cursos</a>
+                <a href="#formacao">Formação</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
              </nav>
+             </div>
         </header>
-        <main>        <!--Contéudo Principal da página-->
-           <section>  <!--Área de Apresentação-->
-            <h1> Victor Kahuach</h1>
-            <h3>Estudante de Análise de Desenvolvimentos de Sistemas</h3>
-            <p>Estudante de Análise de Desenvolvimento de Sistemas, paixão pela área visando desenvoler softwares e Front-end, Trazendo desepenhos e formas acessíveis de desenvolvimento de Sites.</p>
-            <img src="Img/fire.png"/>   <!--Área para colocar sua foto de profissional-->
-           </section>
+        <main>
+             
+           <section class="apresentacao"> <!--Área de Apresentação-->
+            <div class="container">
            
-           <section>
-             <ul>
-               <h1>Sobre em mim</h1>
-               <h3>Atualmente Estudante de Ánalise de Desenvolvimento de Sistema, trabalhand na área de auxílo administrativo de uma empresa hospital de rastreabilidade</h3>
-               <h3>Atualmente residente na penha - vila são geraldo, Zona Leste</h3>
-            </ul>   <!--Área sobre mim-->
-          <!--Nesta área faça:
-            1) escrever um resumo
-            2)Criar uma lista com os itens:
-            2.1) Sua localização
-            2.2) Seu Email
-            2.3) Seu foco para vaga
-            2.4) Idiomas que voce fala-->
-           </section>
+             <div class="apresentacao-texto">
            
-           <section>  <!--Área de formação acadêmica-->
-                    <!--Nesta área oloque sua formação acadêmica.
-                    cada uma em um parágrafo-->            
+             <span class="tag-secao">&lt;ola-mundo/&gt;</span>
+           
+            <h1 class="apresentacao-titulo"> Victor <span class="destaque">Kahuach</span></h1>
+
+            <h3 class="apresentacao-cargo">Estudante de Análise de Desenvolvimentos de Sistemas</h3>
+            <p class="apresentacao-bio">Estudante de Análise de Desenvolvimento de Sistemas, paixão pela área visando desenvoler softwares e Front-end, Trazendo desepenhos e formas acessíveis de desenvolvimento de Sites.</p>
+           
+          <div class="apresentacao-botoes">
+           <a href="#"  class="botao botao-primario">Ver porjetos</a> 
+           <a href="#"  class="botao botao-secundario" >Fale Comigo</a>
+          </div>
+          
+          </div>
+            
+            <div class="apresentacao-foto">   
+            <img src="https://uploads.onecompiler.io/44zhgadp4/1787875422481/fire.png" width="100%"/>   <!--Área para colocar sua foto de profissional-->
+          </div>
+          
+          </div>
+          
+           
            </section>
+          <!-- ======================= SOBRE MIM ======================= -->
+            <section class="sobre" id="sobre">
+                <div class="container">
+                    <span class="tag-secao">&lt;sobre-mim&gt;</span>
+                    <h2 class="titulo-secao">Um pouco sobre mim</h2>
+                    <p class="subtitulo-secao">Quem está por trás do código.</p>
+
+                    <div class="sobre-grid">
+                        <div class="sobre-texto">
+                            <p>
+                               Atualmente Estudante de Ánalise de Desenvolvimento de Sistema, 
+                               trabalhand na área de auxílo administrativo de uma
+                               empresa hospital de rastreabilidade
+                            </p>
+                            <p>
+                                Hoje estudo HTML, CSS e estou avançando para JavaScript,
+                                sempre buscando aprender fazendo — cada projeto novo é uma
+                                desculpa para testar algo que ainda não sei.
+                            </p>
+                        </div>
+
+                        <ul class="info-rapida">
+                            <li><span class="rotulo">localização</span> Penha, Vila São geraldo</li>
+                            <li><span class="rotulo">e-mail</span> victorkds007gmail.com<</li>
+                            <li><span class="rotulo">foco</span> Front-end</li>
+                            <li><span class="rotulo">idiomas</span> Português Nativo, Ingles Médio </li>
+                        </ul>
+                    </div>
+                </div>
+                 </section>
+           <!-- ================================================== -->
+
+           
+                   <!-- ======================= FORMAÇÃO ACADÊMICA ======================= -->
+            <section class="formacao" id="formacao">
+                <div class="container">
+                    <span class="tag-secao">&lt;Formação academica&gt;</span>
+                    <h2 class="titulo-secao">Formação acadêmica</h2>
+                    <p class="subtitulo-secao">Minha trajetória de estudos até aqui.</p>
+
+                    <ul class="linha-tempo">
+                        <li class="item-tempo">
+                            <p class="periodo">2024 — atual</p>
+                            <h3>Análise e Desenvolvimento de Sistemas</h3>
+                            <p class="instituicao">Faculdade Tecnológica de São Paulo</p>
+                            <p>Curso técnico superior com foco em desenvolvimento de software, banco de dados e programação web.</p>
+                        </li>
+
+                        <li class="item-tempo">
+                            <p class="periodo">2021 — 2023</p>
+                            <h3>Ensino Médio Técnico em Informática</h3>
+                            <p class="instituicao">SENAI Vila Mariana</p>
+                            <p>Primeiro contato com lógica de programação, redes e montagem de computadores.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>       
+           <!-- ======================= CURSOS ======================= -->
+            <section class="cursos" id="cursos">
+                <div class="container">
+                    <span class="tag-secao">&lt;cursos-e-certificados&gt;</span>
+                    <h2 class="titulo-secao">Cursos e certificados</h2>
+                    <p class="subtitulo-secao">O que venho estudando por conta própria.</p>
+
+                    <div class="cursos-grid">
+                        <div class="curso-card">
+                            <div class="curso-icone">🌐</div>
+                            <h3>HTML5 e CSS3 na prática</h3>
+                            <p>Fundamentos de estruturação e estilização de páginas web.</p>
+                            <span class="curso-carga">40h</span>
+                        </div>
+
+                        <div class="curso-card">
+                            <div class="curso-icone">📱</div>
+                            <h3>Design Responsivo</h3>
+                            <p>Layouts que se adaptam a celulares, tablets e desktops.</p>
+                            <span class="curso-carga">20h</span>
+                        </div>
+
+                        <div class="curso-card">
+                            <div class="curso-icone">🔧</div>
+                            <h3>Git e GitHub</h3>
+                            <p>Controle de versão e colaboração em projetos de código.</p>
+                            <span class="curso-carga">15h</span>
+                        </div>
+
+                        <div class="curso-card">
+                            <div class="curso-icone">⚡</div>
+                            <h3>Introdução ao JavaScript</h3>
+                            <p>Primeiros passos em lógica de programação para a web.</p>
+                            <span class="curso-carga">30h</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     </body>
 </html>
