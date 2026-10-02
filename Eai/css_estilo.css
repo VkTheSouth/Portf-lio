@@ -4,17 +4,18 @@
 
 :root {
   /*cores*/
-  --cor-fundo: #19bcdde3;
+  --cor-fundo: #439461f4;
   --cor-texto: #000000ec;
   --cor-borda: #000000cc;
-  --cor-variacao:  #591188;
-  --cor-mini-titulo: #4D231C;
-  --cor-dofundo: #D6705C;
-  --cor-fundo-alt: #fff8dc;
+  --cor-variacao:  #7e59eccd;
+  --cor-mini-titulo: #3848c0;
+  --cor-dofundo: #cac8ff7f;
+  --cor-fundo-alt: #8780e9b2;
   --cor-titulo-tag: #1a1400;
-  --cor-texto-suave: #fffaf0;
-  --cor-primaria: #4d83715f;
+  --cor-texto-suave: #d6ff84;
+  --cor-primaria: #3c553e;
   --sombra-card: #000000;
+  --cor-amarela:  #e8eb87af;
 
  /*Fonte*/
  
@@ -112,7 +113,34 @@ ESTILIZAÇÃO PADRÃO DOS TÍTULOS TIPO "tag HTML" DE CADA SESSÃO*/
 
 /*=======================CABEÇALHO DA PÁGINA==========================*/
 
+.bubble-bg {
+  width: 100%;
+  height: 3vh;
+  background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  position: relative;
+  overflow: hidden;
+  
+}
 
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: rise 10s infinite linear;
+ 
+}
+
+.bubble:nth-child(1) { width: 80px; height: 80px; left: 10%; animation-duration: 8s; }
+.bubble:nth-child(2) { width: 40px; height: 40px; left: 20%; animation-duration: 12s; animation-delay: 2s; }
+.bubble:nth-child(3) { width: 120px; height: 120px; left: 70%; animation-duration: 15s; animation-delay: 1s; }
+.bubble:nth-child(4) { width: 60px; height: 60px; left: 85%; animation-duration: 9s; animation-delay: 4s; }
+
+@keyframes rise {
+  0% { bottom: -100px; transform: translateX(0); }
+  50% { transform: translateX(50px); }
+  100% { bottom: 110%; transform: translateX(-50px); }
+}
 
 .cabecalho{
   position: sticky;
@@ -176,7 +204,7 @@ ESTILIZAÇÃO PADRÃO DOS TÍTULOS TIPO "tag HTML" DE CADA SESSÃO*/
 }
 /*Estilização padrão para o sub-título da seção*/
 .subtitulo-secao {
-  color: var(--cor-texto-suave);
+  color: var(--cor-texto);
   max-width: 560px;
   margin-bottom: 48px;
 }
@@ -447,6 +475,30 @@ color: var(--cor-texto);
 .projeto-links a:hover {
   text-decoration: underline; /*Sublinha o link ao passar o mouse*/
 }
+
+.espaco1 {
+ display: grid;
+
+  border-radius: 16px; /*Arredonda os cantos do cartão*/
+  padding: 32px; /*Espaçamento interno do cartão*/
+  margin-bottom: 40px;
+
+  background-color: rgba(245,247,250,0.85);
+  backdrop-filter: blur(6px);
+  top: 0;
+  z-index: 100;
+}
+
+.espaco2 {
+ display: grid;
+ background-color: var(--cor-amarela);
+  border-radius: 12px; /*Arredonda os cantos do cartão*/
+  padding: 32px; /*Espaçamento interno do cartão*/
+  
+}
+
+
+
 
 /* --------------------------------------------------------------------------
    CONTATO / RODAPÉ
