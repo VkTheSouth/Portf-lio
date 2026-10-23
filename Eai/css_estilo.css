@@ -4,22 +4,22 @@
 
 :root {
   /*cores*/
-  --cor-fundo: #439461f4;
+  --cor-fundo: #03668df4;
   --cor-texto: #000000ec;
   --cor-borda: #000000cc;
-  --cor-variacao:  #7e59eccd;
-  --cor-mini-titulo: #3848c0;
-  --cor-dofundo: #cac8ff7f;
-  --cor-fundo-alt: #8780e9b2;
+  --cor-variacao:  #433766a8;
+  --cor-mini-titulo: #000000;
+  --cor-dofundo: #3d0264c7;
+  --cor-fundo-alt: #02317457;
   --cor-titulo-tag: #1a1400;
-  --cor-texto-suave: #d6ff84;
-  --cor-primaria: #3c553e;
+  --cor-texto-suave: #ffffff;
+  --cor-primaria: #b5ccb6;
   --sombra-card: #000000;
-  --cor-amarela:  #e8eb87af;
+  --cor-amarela:  #aeb2ce;
 
  /*Fonte*/
  
- --fonte-texto: "Playfair+Display:ital";
+ --fonte-texto: "Orbitron";
  --fonte-titulo: "Arials";
  --fonte-clean: "Orbitron";
  --fonte-mono: "Fredoka";
@@ -34,6 +34,9 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+
+  align-items: center;
 }
 
 
@@ -331,6 +334,27 @@ ESTILIZAÇÃO PADRÃO DOS TÍTULOS TIPO "tag HTML" DE CADA SESSÃO*/
   color: var(--cor-fundo); /*Cor de destaque, chamando atenção pra data*/
   margin-bottom: 4px; /*Espaço abaixo da data*/
 }
+
+.espaco2 {
+ display: grid;
+ background-color: rgba(156, 173, 230, 0.85);
+  border-radius: 12px; /*Arredonda os cantos do cartão*/
+  padding: 32px; /*Espaçamento interno do cartão*/
+  
+}
+
+.espaco1 {
+ display: grid;
+
+  border-radius: 16px; /*Arredonda os cantos do cartão*/
+  padding: 32px; /*Espaçamento interno do cartão*/
+  margin-bottom: 40px;
+
+  background-color:  rgba(156, 173, 230, 0.85);
+  backdrop-filter: blur(6px);
+  top: 0;
+  z-index: 100;
+}
 /* --------------------------------------------------------------------------
    CURSOS
    Grid responsivo: o navegador decide sozinho quantas colunas cabem,
@@ -476,26 +500,8 @@ color: var(--cor-texto);
   text-decoration: underline; /*Sublinha o link ao passar o mouse*/
 }
 
-.espaco1 {
- display: grid;
 
-  border-radius: 16px; /*Arredonda os cantos do cartão*/
-  padding: 32px; /*Espaçamento interno do cartão*/
-  margin-bottom: 40px;
 
-  background-color: rgba(245,247,250,0.85);
-  backdrop-filter: blur(6px);
-  top: 0;
-  z-index: 100;
-}
-
-.espaco2 {
- display: grid;
- background-color: var(--cor-amarela);
-  border-radius: 12px; /*Arredonda os cantos do cartão*/
-  padding: 32px; /*Espaçamento interno do cartão*/
-  
-}
 
 
 
@@ -513,7 +519,7 @@ color: var(--cor-texto);
 }
 
 .contato .tag-secao {
-  background-color: rgba(204, 184, 184, 0.921); /*Sobrescreve o fundo padrão da etiqueta por um tom claro e translúcido, adequado ao fundo escuro*/
+  background-color: rgba(194, 76, 76, 0.432); /*Sobrescreve o fundo padrão da etiqueta por um tom claro e translúcido, adequado ao fundo escuro*/
 }
 
 .contato .titulo-secao {
@@ -560,3 +566,69 @@ color: var(--cor-texto);
   color: rgba(255, 255, 255, 0.4); /*Branco bem apagado, o elemento de menor destaque da seção*/
   font-family: var(--fonte-mono); /*Fonte monoespaçada, reforçando a estética de código*/
 }
+
+NO FINAL DO CSS:
+/* --------------------------------------------------------------------------
+   BOTÃO DO MENU MOBILE (HAMBÚRGUER)
+   Por padrão fica escondido — só aparece dentro da media query, quando o
+   menu grande não cabe mais na tela.
+-------------------------------------------------------------------------- */
+.menu-toggle {
+  display: none; /*Escondido no desktop — o menu grande (.menu) já aparece*/
+  font-size: 28px; /*Tamanho do ícone ☰*/
+  background: none; /*Remove o fundo padrão de botão*/
+  border: none; /*Remove a borda padrão de botão*/
+  color: var(--cor-texto); /*Mesma cor usada no resto do cabeçalho*/
+  cursor: pointer; /*Indica que é clicável*/
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVIDADE
+   Media query: a partir daqui, essas regras substituem as de cima — mas só
+   quando a largura da tela for 860px ou menos.
+-------------------------------------------------------------------------- */
+@media (max-width: 860px) {
+
+  /*APRESENTAÇÃO: as duas colunas (texto + foto) viram uma só, empilhadas*/
+  .apresentacao .container {
+    grid-template-columns: 1fr; /*Era 1.1fr 0.9fr (2 colunas) — agora 1 coluna só*/
+    text-align: center; /*Centraliza o texto, já que a foto também fica centralizada*/
+  }
+
+  .apresentacao-texto {
+    min-width: 0; /*Sem isso, um item de grid nunca encolhe menos que o conteúdo mais largo (o título) — e empurra a página pra fora da tela*/
+  }
+
+  .apresentacao-titulo {
+    font-size: 48px; /*Era 80px — grande demais pra uma tela de celular*/
+  }
+
+  .apresentacao-bio {
+    max-width: 100%; /*Era 480px — usa a largura toda disponível*/
+    margin-left: auto; /*Centraliza o bloco de texto*/
+    margin-right: auto;
+  }
+
+  .apresentacao-botoes {
+    justify-content: center; /*Centraliza os botões, já que o texto está centralizado*/
+  }
+
+  .apresentacao-foto {
+    width: 100%; /*Era 70% — ocupa a largura toda, já que não divide mais coluna com o texto*/
+    margin-top: 32px; /*Espaço entre o texto e a foto, agora que estão empilhados*/
+  }
+
+  /*SOBRE MIM: mesma lógica — texto e lista de informações viram 1 coluna*/
+  .sobre-grid {
+    grid-template-columns: 1fr; /*Era 1.3fr 0.7fr — agora empilhados*/
+  }
+
+  /*MENU: esconde o menu grande, mostra o botão hambúrguer no lugar dele*/
+  .menu {
+    display: none; /*Não cabe mais na tela — some até termos JavaScript pra abrir/fechar*/
+  }
+
+  .menu-toggle {
+    display: block; /*Agora aparece, já que o menu grande sumiu*/
+  }
+} 
